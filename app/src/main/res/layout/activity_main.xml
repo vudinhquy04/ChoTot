@@ -2,16 +2,122 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bnvMain"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="#FFCC00">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtManerger"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Quản Lý Tin Đăng"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/edt_search"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_search3"
+                android:layout_width="48dp"
+                android:layout_height="?actionBarSize"
+                android:padding="8dp"
+                android:src="@drawable/ic_search"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ic_notifi"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_search2"
+                android:layout_width="48dp"
+                android:layout_height="?actionBarSize"
+                android:padding="8dp"
+                android:src="@drawable/ic_search1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ic_notifi"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/edt_search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#FFCC00"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toStartOf="@id/ic_notifi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_edit"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="2dp"
+                    android:paddingHorizontal="10dp"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_search"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="@color/black"
+                    android:hint="Tìm Kiếm Trên Chợ Tốt"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_notifi"
+                android:layout_width="48dp"
+                android:layout_height="?actionBarSize"
+                android:padding="8dp"
+                android:src="@drawable/ic_notifi"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ic_Chat"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_Chat"
+                android:layout_width="48dp"
+                android:layout_height="?actionBarSize"
+                android:padding="8dp"
+                android:src="@drawable/ic_chat"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:id="@+id/flFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/bnvContent"
+            app:layout_constraintTop_toBottomOf="@+id/clToolBar" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bnvContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            app:itemTextColor="#FFCC00"
+            app:itemRippleColor="#FFCC00"
+            android:outlineAmbientShadowColor="#FFCC00"
+            android:outlineSpotShadowColor="#FFCC00"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:menu="@menu/menu_bottom"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
