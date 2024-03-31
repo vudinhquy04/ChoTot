@@ -5,29 +5,23 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
+import com.quyvd.chotot.Adapter.QuanLyPagerAdapter
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [QuanLyFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class QuanLyFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private lateinit var quanLyPagerAdapter: QuanLyPagerAdapter
+    private lateinit var tlQuanLy: TabLayout
+    private lateinit var vpQuanLy: ViewPager2
+    private lateinit var canThanhToanFragment: CanThanhToanFragment
+    private lateinit var dangHienThiFragment: DangHienThiFragment
+    private lateinit var hetHanFragment: HetHanFragment
+    private lateinit var tuChoiFragment: TuChoiFragment
+    private lateinit var tinNhapFragment: TinNhapFragment
+    private lateinit var choDuyetFragment: ChoDuyetFragment
+    private lateinit var daAnFragment: DaAnFragment
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,23 +31,50 @@ class QuanLyFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_quan_ly, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment QuanLyFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            QuanLyFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        vpQuanLy = view.findViewById(R.id.vpQuanLy)
+        tlQuanLy = view.findViewById(R.id.tlQuanLy)
+
+        dangHienThiFragment = DangHienThiFragment()
+        hetHanFragment = HetHanFragment()
+        tuChoiFragment = TuChoiFragment()
+        canThanhToanFragment = CanThanhToanFragment()
+        tinNhapFragment = TinNhapFragment()
+        choDuyetFragment = ChoDuyetFragment()
+        daAnFragment = DaAnFragment()
+
+
+        val listQuanLyFragment: ArrayList<Fragment> = ArrayList()
+        listQuanLyFragment.add(dangHienThiFragment)
+        listQuanLyFragment.add(hetHanFragment)
+        listQuanLyFragment.add(tuChoiFragment)
+        listQuanLyFragment.add(canThanhToanFragment)
+        listQuanLyFragment.add(tinNhapFragment)
+        listQuanLyFragment.add(choDuyetFragment)
+        listQuanLyFragment.add(daAnFragment)
+
+        quanLyPagerAdapter = QuanLyPagerAdapter(requireActivity(), listQuanLyFragment)
+        vpQuanLy.adapter = quanLyPagerAdapter
+
+        TabLayoutMediator(tlQuanLy, vpQuanLy) { tab, index ->
+            run {
+                if (index == 0) {
+                    tab.text = "Đang Hiển Thị (0)"
+                } else if (index == 1) {
+                    tab.text = "Hết Hạn (0)"
+                } else if (index == 2) {
+                    tab.text = "Bị Từ Chối (0)"
+                } else if (index == 3) {
+                    tab.text = "Cần Thanh Toán (0)"
+                } else if (index == 4) {
+                    tab.text = "Tin Nháp (0)"
+                } else if (index == 5) {
+                    tab.text = "Chờ Duyệt (0)"
+                } else {
+                    tab.text = "Đã Ẩn (0)"
                 }
             }
+        }.attach()
     }
 }

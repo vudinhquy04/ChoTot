@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:id="@+id/ctlMain"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -66,7 +67,7 @@
                     android:layout_marginBottom="2dp"
                     android:paddingHorizontal="10dp"
                     android:drawablePadding="10dp"
-                    android:drawableStart="@drawable/ic_search"
+                    android:drawableStart="@drawable/ic_search1"
                     android:layout_marginHorizontal="10dp"
                     android:textColor="@color/black"
                     android:hint="Tìm Kiếm Trên Chợ Tốt"
@@ -104,7 +105,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/bnvContent"
-            app:layout_constraintTop_toBottomOf="@+id/clToolBar" />
+            app:layout_constraintTop_toBottomOf="@+id/clToolBar"
+            android:background="#DCDCDC"/>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bnvContent"

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
     android:orientation="vertical"
     tools:context=".DaoChoFragment">
 
@@ -11,13 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <com.google.android.material.tabs.TabLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:id="@+id/tlDaoCho"
-            android:background="#FFFFFF"
-            app:tabTextColor="@color/black"
-            />
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/vpDaocho"
             android:layout_width="match_parent"
@@ -32,4 +25,4 @@
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-</LinearLayout>
+</ScrollView>
