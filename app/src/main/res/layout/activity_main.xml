@@ -108,18 +108,19 @@
             app:layout_constraintTop_toBottomOf="@+id/clToolBar"
             android:background="#F8F8F8"/>
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bnvContent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            app:itemTextColor="#FFCC00"
-            app:itemRippleColor="#FFCC00"
-            android:outlineAmbientShadowColor="#FFCC00"
-            android:outlineSpotShadowColor="#FFCC00"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:menu="@menu/menu_bottom"/>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnvContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:outlineAmbientShadowColor="#FFCC00"
+        android:outlineSpotShadowColor="#FFCC00"
+        app:labelVisibilityMode="unlabeled"
+        app:itemRippleColor="#FFCC00"
+        app:itemTextColor="#FFCC00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_bottom" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

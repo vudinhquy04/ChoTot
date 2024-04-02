@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostNewsActivity"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_gravity="center">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/tb_choTot"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#FFD700">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize"
+            android:drawableStart="@drawable/ic_arrow4"
+            android:paddingStart="15dp"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_chotot"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tb_choTot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm số điện thoại"
+            android:textSize="20dp"
+            android:layout_marginStart="9dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nhập số điện thoại của bạn để kích hoạt tài khoản"
+            android:textColor="@color/black"
+            android:layout_marginStart="9dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="340dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_edtsdt"
+                android:hint="Số điện thoại"
+                android:paddingStart="10dp"
+                android:textColorHint="	#A9A9A9"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:elevation="10dp"
+                android:layout_marginBottom="15dp"
+               />
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_edtsdt"
+            android:hint="Mật Khẩu"
+            android:paddingStart="10dp"
+            android:textColorHint="	#A9A9A9"
+            android:layout_gravity="center"
+            android:elevation="10dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/black"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:text="Tiếp Tục"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:background="#FFD700"
+            android:textSize="18dp"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

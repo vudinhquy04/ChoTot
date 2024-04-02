@@ -1,7 +1,10 @@
 package com.quyvd.chotot
 
+import android.content.ClipData.Item
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
@@ -26,6 +29,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var imgNotifi1 : AppCompatImageView
     private lateinit var icChat : AppCompatImageView
 
+    private var currentItem = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -49,6 +54,7 @@ class MainActivity : AppCompatActivity() {
         btnBottom.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.menu_home -> {
+                    currentItem = R.id.menu_home
                     thayDoiManHinh(homeFragment)
                     edtSearch.visibility = View.VISIBLE
                     icSearch.visibility = View.GONE
@@ -56,6 +62,7 @@ class MainActivity : AppCompatActivity() {
 
                 }
                 R.id.menu_manager -> {
+                    currentItem = R.id.menu_manager
                     thayDoiManHinh(quanLyFragment)
                     edtSearch.visibility = View.GONE
                     txtManerger.visibility = View.VISIBLE
@@ -65,10 +72,11 @@ class MainActivity : AppCompatActivity() {
                     icChat.visibility = View.VISIBLE
                 }
                 R.id.menu_dangTin -> {
-                    thayDoiManHinh(dangTinFragment)
-                    imgIcsearch.visibility = View.GONE
+                    val intent = Intent(this,PostNewsActivity::class.java)
+                    startActivity(intent)
                 }
                 R.id.menu_cho -> {
+                    currentItem = R.id.menu_cho
                     thayDoiManHinh(daoChoFragment)
                     edtSearch.visibility = View.GONE
                     imgIcsearch.visibility = View.GONE
@@ -77,6 +85,7 @@ class MainActivity : AppCompatActivity() {
 
                 }
                 R.id.menu_user -> {
+                    currentItem = R.id.menu_user
                     thayDoiManHinh(taiKhoanFragment)
                     imgIcsearch.visibility = View.GONE
                     txtManerger.setText("Thêm")
@@ -94,6 +103,12 @@ class MainActivity : AppCompatActivity() {
         val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)
         transaction.commitNowAllowingStateLoss()
+    }
+
+    override fun onRestart() {
+
+        super.onRestart()
+        btnBottom.selectedItemId = currentItem
     }
 
 }
