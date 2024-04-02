@@ -3,8 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:elevation="8dp"
-    app:cardCornerRadius="4dp"
+    android:elevation="3dp"
+    app:cardUseCompatPadding="false"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="2dp"
     >
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -86,6 +88,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
                 android:textSize="16dp"
                 android:textColor="#FF0000"
                 android:text="Giá Bán"
@@ -97,6 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
                 android:textSize="15dp"
                 android:textColor="#000000"
                 android:text="Thông Tin"
@@ -112,11 +116,13 @@
                     android:text="Lưu Tin"
                     android:drawableStart="@drawable/ic_love"
                     android:gravity="center"
+                    android:textColor="@color/black"
                     android:layout_weight="1"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Chat"
+                    android:textColor="@color/black"
                     android:drawableStart="@drawable/ic_chat1"
                     android:gravity="center"
                     android:layout_weight="1"/>
@@ -124,6 +130,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Chia Sẻ"
+                    android:textColor="@color/black"
                     android:gravity="center"
                     android:drawableStart="@drawable/ic_share"
                     android:layout_weight="1"/>

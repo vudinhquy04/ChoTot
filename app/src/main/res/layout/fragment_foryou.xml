@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ForyouFragment">
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".DaoChoFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vpDaocho"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCn6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_chucnang4"/>
 
-</FrameLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</ScrollView>

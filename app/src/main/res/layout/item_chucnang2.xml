@@ -3,8 +3,10 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:elevation="8dp"
-    app:cardCornerRadius="4dp"
+    android:elevation="0dp"
+    app:cardUseCompatPadding="false"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp"
     android:layout_margin="8dp"
     >
 
@@ -17,8 +19,8 @@
         android:background="#FFFFFF">
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="150dp"
-            android:layout_height="200dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:layout_margin="3dp"
@@ -26,8 +28,8 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/icCn2"
-                android:layout_width="100dp"
-                android:layout_height="100dp" />
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
 
             <TextView
                 android:gravity="center"
@@ -35,12 +37,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:textSize="15dp"
+                android:textSize="12dp"
                 android:textColor="#000000"
                 android:text="Chức năng"
                 android:maxLines="2"
-                android:scrollHorizontally="false"
-                android:textStyle="bold" />
+                android:scrollHorizontally="false" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
 

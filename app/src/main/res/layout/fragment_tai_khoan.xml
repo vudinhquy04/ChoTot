@@ -14,7 +14,7 @@
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="210dp"
             android:background="#FFFFFF"
             android:orientation="vertical"
             android:gravity="center_vertical">
@@ -89,16 +89,18 @@
             </androidx.appcompat.widget.LinearLayoutCompat>
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="90dp"
                 android:layout_margin="10dp"
                 android:layout_marginHorizontal="20dp"
                 android:paddingVertical="10dp"
                 android:background="@color/white">
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:layout_weight="1"
                     android:text="Điểm Tốt"
+                    android:elevation="20dp"
+                    android:layout_marginEnd="10dp"
                     android:textColor="@color/black"
                     android:textAllCaps="false"
                     android:drawableBottom="@drawable/ic_star2"
@@ -106,9 +108,10 @@
                     />
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:layout_weight="1"
                     android:text="Đồng Tốt"
+                    android:elevation="20dp"
                     android:textColor="@color/black"
                     android:textAllCaps="false"
                     android:drawableBottom="@drawable/ic_money"
@@ -147,8 +150,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="Đơn Mua"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -172,8 +174,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="Đơn Bán"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -196,8 +197,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="Ví Bán Hàng"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -237,8 +237,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="Tin Đăng Đã Lưu"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -262,8 +261,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="Tìm Kiếm Đã Lưu"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -286,8 +284,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="Đánh Giá Từ Tôi"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -321,8 +318,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="Đồng Tốt"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -347,7 +343,6 @@
                 android:layout_marginStart="16dp"
                 android:text="Gói PRO"
                 android:textColor="@color/black"
-                android:textStyle="bold"
                 android:paddingEnd="10dp"/>
             <TextView
                 android:layout_width="30dp"
@@ -378,8 +373,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="Lịch Sử Giao Dịch"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -402,8 +396,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="Tạo Cửa Hàng/Chuyên Trang"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -445,8 +438,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="Chợ Tốt ưu đãi"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -468,8 +460,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="Giới thiệu bạn bè"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -496,15 +487,14 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_money1" />
+                android:src="@drawable/ic_setting6" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="Cài đặt tài khoản"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -519,15 +509,14 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_money1" />
+                android:src="@drawable/ic_phone5" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="Định giá điện thoại"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -542,7 +531,7 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_money1" />
+                android:src="@drawable/ic_history2" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -550,7 +539,6 @@
                 android:layout_marginStart="16dp"
                 android:text="Quản lí lịch sử đăng nhập"
                 android:textColor="@color/black"
-                android:textStyle="bold"
                 android:paddingEnd="10dp"/>
             <TextView
                 android:layout_width="30dp"
@@ -574,15 +562,14 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_money1" />
+                android:src="@drawable/ic_support" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="Trợ giúp"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -597,15 +584,14 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_money1" />
+                android:src="@drawable/ic_comment" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="Đóng góp ý kiến"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -620,15 +606,14 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_money1" />
+                android:src="@drawable/ic_signout1" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="Đăng xuất"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>

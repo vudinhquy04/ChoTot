@@ -11,7 +11,7 @@ import com.quyvd.chotot.Adapter.DaoChoRvAdapter
 
 class NearyouFragment : Fragment() {
     private lateinit var daoChoRvAdapter: DaoChoRvAdapter
-    private lateinit var rvCn4 : RecyclerView
+    private lateinit var rvCn5 : RecyclerView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,7 +23,7 @@ class NearyouFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        rvCn4 = view.findViewById(R.id.rvCn4)
+        rvCn5 = view.findViewById(R.id.rvCn5)
         val listSanPham: ArrayList<DaoCho> = ArrayList()
         listSanPham.add(DaoCho("https://thuthuatnhanh.com/wp-content/uploads/2019/10/anh-girl-xinh-ha-noi-2k.jpg","Vu Dinh Quy", "Hom Qua","https://hc.com.vn/i/ecommerce/media/ckeditor_3370949.jpg","100.000.000 đ","Điện thoại Samsung Galaxy A20s 3GB/32GB Đỏ giá rẻ, chính hãng, trả góp 0% - Siêu thị điện máy HC"))
         listSanPham.add(DaoCho("https://thuthuatnhanh.com/wp-content/uploads/2019/10/anh-girl-xinh-ha-noi-2k.jpg","Vu Dinh Quy", "Hom Qua","https://hc.com.vn/i/ecommerce/media/ckeditor_3370949.jpg","100.000.000 đ","Điện thoại Samsung Galaxy A20s 3GB/32GB Đỏ giá rẻ, chính hãng, trả góp 0% - Siêu thị điện máy HC"))
@@ -33,9 +33,9 @@ class NearyouFragment : Fragment() {
         listSanPham.add(DaoCho("https://thuthuatnhanh.com/wp-content/uploads/2019/10/anh-girl-xinh-ha-noi-2k.jpg","Vu Dinh Quy", "Hom Qua","https://hc.com.vn/i/ecommerce/media/ckeditor_3370949.jpg","100.000.000 đ","Điện thoại Samsung Galaxy A20s 3GB/32GB Đỏ giá rẻ, chính hãng, trả góp 0% - Siêu thị điện máy HC"))
         daoChoRvAdapter= DaoChoRvAdapter(listSanPham)
 
-        rvCn4.adapter = daoChoRvAdapter
+        rvCn5.adapter = daoChoRvAdapter
 
-        rvCn4.layoutManager = GridLayoutManager(context, 1)
+        rvCn5.layoutManager = GridLayoutManager(context, 1)
 
     }
 }

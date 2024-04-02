@@ -17,7 +17,7 @@
             android:layout_height="match_parent"
             />
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvCn4"
+            android:id="@+id/rvCn5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:listitem="@layout/item_chucnang4"/>

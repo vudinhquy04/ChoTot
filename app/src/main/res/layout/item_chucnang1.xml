@@ -3,9 +3,11 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:elevation="8dp"
-    app:cardCornerRadius="4dp"
-    android:layout_margin="8dp">
+    android:elevation="0dp"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp"
+    android:layout_margin="8dp"
+    app:cardUseCompatPadding="false">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="100dp"
@@ -16,8 +18,8 @@
         android:background="#FFFFFF">
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="3dp"
             android:gravity="center"
@@ -25,8 +27,8 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/icCn"
-                android:layout_width="70dp"
-                android:layout_height="70dp" />
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
 
             <TextView
                 android:id="@+id/tvNameCn"
@@ -34,13 +36,12 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_marginTop="4dp"
-                android:textSize="10dp"
+                android:textSize="12dp"
                 android:textColor="#000000"
                 android:text="Chức năng"
                 android:maxLines="2"
                 android:scrollHorizontally="false"
-
-                android:textStyle="bold" />
+                />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
 

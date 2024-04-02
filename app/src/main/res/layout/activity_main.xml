@@ -11,11 +11,11 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/clToolBar"
             android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
+            android:layout_height="60dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:background="#FFCC00">
+            android:background="#FFD700">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/txtManerger"
@@ -32,7 +32,7 @@
                 />
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ic_search3"
-                android:layout_width="48dp"
+                android:layout_width="44dp"
                 android:layout_height="?actionBarSize"
                 android:padding="8dp"
                 android:src="@drawable/ic_search"
@@ -41,7 +41,7 @@
                 app:layout_constraintEnd_toStartOf="@id/ic_notifi"/>
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ic_search2"
-                android:layout_width="48dp"
+                android:layout_width="44dp"
                 android:layout_height="?actionBarSize"
                 android:padding="8dp"
                 android:src="@drawable/ic_search1"
@@ -53,7 +53,7 @@
                 android:id="@+id/edt_search"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#FFCC00"
+                android:background="#FFD700"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toStartOf="@id/ic_notifi"
                 app:layout_constraintStart_toStartOf="parent"
@@ -61,9 +61,9 @@
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:layout_width="match_parent"
-                    android:layout_height="48dp"
+                    android:layout_height="38dp"
                     android:background="@drawable/bg_edit"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="2dp"
                     android:paddingHorizontal="10dp"
                     android:drawablePadding="10dp"
@@ -71,23 +71,23 @@
                     android:layout_marginHorizontal="10dp"
                     android:textColor="@color/black"
                     android:hint="Tìm Kiếm Trên Chợ Tốt"
+                    android:textColorHint="#C0C0C0"
                     />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ic_notifi"
-                android:layout_width="48dp"
+                android:layout_width="44dp"
                 android:layout_height="?actionBarSize"
                 android:padding="8dp"
                 android:src="@drawable/ic_notifi"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/ic_Chat"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ic_Chat"
-                android:layout_width="48dp"
+                android:layout_width="44dp"
                 android:layout_height="?actionBarSize"
                 android:padding="8dp"
                 android:src="@drawable/ic_chat"
@@ -106,7 +106,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/bnvContent"
             app:layout_constraintTop_toBottomOf="@+id/clToolBar"
-            android:background="#DCDCDC"/>
+            android:background="#F8F8F8"/>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bnvContent"
