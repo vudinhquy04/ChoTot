@@ -47,8 +47,6 @@
             android:background="@drawable/bg_btndangtin2"/>
 
 
-
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
